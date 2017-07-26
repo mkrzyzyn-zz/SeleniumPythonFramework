@@ -10,8 +10,16 @@ class LoginPageLocators:
     PASSWORD_FIELD=(By.XPATH,"//*[@id=\"fieldset_password\"]/div[1]/input")
     MAIL_FIELD=(By.XPATH,"//*[@id=\"fieldset_email\"]/div/input")
     CONFIRM_BUTTON = (By.CSS_SELECTOR, "body > section > form > button")
+    PASSWORD_BOX = (By.CLASS_NAME,"tooltip-inner")
+    PASSWORD_RESET_BUTTON = (By.XPATH,"//*[@id=\"remindPassword\"]")
+
+class PasswordPageLocators:
+    NAME_FIELD_PASSWD=(By.NAME,"store_name")
+    MAIL_FIELD_PASSWD=(By.NAME,"email")
+    CONFIRM_BUTTON_PASSWD=(By.XPATH,"/html/body/section/form/button")
 
 class RegisterPageLocators:
+
     NAME_FIELD=(By.XPATH, "//*[@id=\"storeName\"]")
     MAIL_FIELD=(By.XPATH, "//*[@id=\"storeEmail\"]")
     PASSWORD_FIELD=(By.XPATH, "//*[@id=\"storePassword\"]")
@@ -29,3 +37,30 @@ class WelcomePageLocators:
     PRODUCT_1=(By.XPATH,"//*[@id=\"fieldset_selling\"]/div[2]/div/ul/li[3]/a/span[1]")
     REASON1_1=(By.XPATH,"//*[@id=\"fieldset_why\"]/div[2]/div/ul/li[3]/a/span[1]")
     REASON2_1=(By.XPATH,"//*[@id=\"fieldset_hear\"]/div[2]/div/ul/li[2]/a")
+
+class AdminPanelLocators:
+
+    ADD_BOX = (By.XPATH, "// *[ @ id = \"blankslateProductsHeading\"] / h4 / a")
+    ADD_PRODUCT_BUTTON=(By.XPATH,"//*[@id=\"blankslateProducts\"]/div/div[2]/div/a[3]")
+
+class ProductFormLocators:
+
+    PRODUCT_NAME = (By.XPATH,"//*[@id=\"name\"]")
+    PRODUCT_PRICE = (By.XPATH,"//*[@id=\"price\"]")
+    PRODUCT_SKU = (By.NAME,"sku")
+    PRODUCT_DESCRIPTION = (By.XPATH,"//*[@id=\"redactor-uuid-0\"]")
+    SHORT_DESCRIPTION = (By.XPATH, "//*[@id=\"short_description\"]")
+    SET_TAX = (By.XPATH,"//*[@id=\"tax\"]")
+    WEIGHT = (By.NAME,"weight")
+    WIDTH = (By.NAME,"width")
+    HEIGHT = (By.NAME,"weight")
+    DEPTH = (By.NAME,"depth")
+    DIAMETER = (By.NAME,"diameter")
+    DELIVERY = (By.XPATH,"/html/body/section[2]/section/section/article/section/section/form/table/tbody/tr[2]/td[2]/section[4]/div/label")
+    TAG_TEXT = (By.ID,"tag")
+    TAG_CONFIRM = (By.XPATH,"/html/body/section[2]/section/section/article/section/section/form/table/tbody/tr[3]/td[2]/section/section/button")
+    IMAGE = (By.XPATH,"/html/body/section[2]/section/section/article/section/section/form/table/tbody/tr[4]/td[2]/ul/li[1]/a/input")
+    BUY_EMPTY = (By.XPATH,"//*[@id=\"addToStockView\"]/section[2]/section[2]/div/label")
+    META_TITLE = (By.NAME,"meta_title")
+    META_DESCRIPTION = (By.NAME, "meta_description")
+    SAVE_CHANGES = (By.XPATH, "/html/body/section[2]/section/section/article/section/section/form/section[3]/section/button")

@@ -1,0 +1,249 @@
+{
+	"id": "924e9158-6e12-459e-7f3e-1162feed2486",
+	"name": "Shoplo",
+	"description": "",
+	"order": [],
+	"folders": [
+		{
+			"id": "bb10f054-6c01-ba50-8eb2-a0e076fe184d",
+			"name": "Comments",
+			"description": "",
+			"order": [
+				"0b8337f7-5e59-94b8-a778-0f4a46d34c3c",
+				"5e61ab6c-4435-8d37-fae6-49de7d712325"
+			],
+			"owner": "2468956"
+		},
+		{
+			"id": "7da552ab-80d0-a136-5185-b3342eeb60c5",
+			"name": "Posts",
+			"description": "",
+			"order": [
+				"e442a616-d98d-c03c-45bb-6c33e975359c",
+				"daae53a5-a920-10c5-65f5-318ebbf50897",
+				"c7371204-d0b2-8642-882b-23878bd96c19",
+				"e033e103-5058-8db3-d7e1-af68b8da6680"
+			],
+			"owner": "2468956"
+		}
+	],
+	"timestamp": 1501050219598,
+	"owner": "2468956",
+	"public": false,
+	"requests": [
+		{
+			"id": "0b8337f7-5e59-94b8-a778-0f4a46d34c3c",
+			"headers": "Content-Type: application/json;charset=UTF-8\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json;charset=UTF-8",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://jsonplaceholder.typicode.com/comments?postId=1",
+			"queryParams": [
+				{
+					"key": "postId",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "\ntests[\"Status code is 200\"] = responseCode.code === 200\n\nresponseBody = JSON.parse(responseBody);\n\ntests[\"userId is 1\"] = responseBody[0].postId === 1;\ntests[\"Id is 1\"] = responseBody[0].id === 1;\n\ntests[\"Name is id labore ex et quam laborum\"] = responseBody[0].name \n=== \"id labore ex et quam laborum\";\n\ntests[\"Mail is Eliseo@gardner.biz\"] = responseBody[0].email \n=== \"Eliseo@gardner.biz\";\n\ntests[\"Body is laudantium enim quasi est quidem magnam voluptate ipsam eos\\ntempora quo necessitatibus\\ndolor quam autem quasi\\nreiciendis et nam sapiente accusantium\"] = responseBody[0].body === \"laudantium enim quasi est quidem magnam voluptate ipsam eos\\ntempora quo necessitatibus\\ndolor quam autem quasi\\nreiciendis et nam sapiente accusantium\";",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1501057702190,
+			"name": "GET COMMENT",
+			"description": "testing get",
+			"collectionId": "924e9158-6e12-459e-7f3e-1162feed2486",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "5e61ab6c-4435-8d37-fae6-49de7d712325",
+			"headers": "Content-Type: application/json;charset=UTF-8\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json;charset=UTF-8",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://jsonplaceholder.typicode.com/comments?postId=1",
+			"queryParams": [
+				{
+					"key": "postId",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "924e9158-6e12-459e-7f3e-1162feed2486",
+			"data": [
+				{
+					"key": "mail",
+					"value": "maciej.krzyzynski@gmail.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "POST COMMENT",
+			"description": "testing post",
+			"descriptionFormat": "html",
+			"time": 1501057364302,
+			"version": 2,
+			"responses": [],
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "bb10f054-6c01-ba50-8eb2-a0e076fe184d"
+		},
+		{
+			"id": "c7371204-d0b2-8642-882b-23878bd96c19",
+			"headers": "Content-Type: application/json;charset=UTF-8\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json;charset=UTF-8",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://jsonplaceholder.typicode.com/posts/1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1501055520744,
+			"name": "POST PUT 1",
+			"description": "testing put",
+			"collectionId": "924e9158-6e12-459e-7f3e-1162feed2486",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "daae53a5-a920-10c5-65f5-318ebbf50897",
+			"headers": "Content-Type: application/json;charset=UTF-8\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json;charset=UTF-8",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://jsonplaceholder.typicode.com/posts",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status code is 201\"] = responseCode.code === 201;\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1501055150902,
+			"name": "POST POST 101",
+			"description": "testing post",
+			"collectionId": "924e9158-6e12-459e-7f3e-1162feed2486",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "e033e103-5058-8db3-d7e1-af68b8da6680",
+			"headers": "Content-Type: application/json;charset=UTF-8\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json;charset=UTF-8",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://jsonplaceholder.typicode.com/posts/1",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "DELETE",
+			"collectionId": "924e9158-6e12-459e-7f3e-1162feed2486",
+			"data": [],
+			"dataMode": "raw",
+			"name": "DELETE POST",
+			"description": "testing delete",
+			"descriptionFormat": "html",
+			"time": 1501055572714,
+			"version": 2,
+			"responses": [],
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "7da552ab-80d0-a136-5185-b3342eeb60c5",
+			"rawModeData": ""
+		},
+		{
+			"id": "e442a616-d98d-c03c-45bb-6c33e975359c",
+			"headers": "",
+			"headerData": [],
+			"url": "http://jsonplaceholder.typicode.com/posts/1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [
+				{
+					"key": "ID",
+					"value": "499",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "userId",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200\n\nresponseBody = JSON.parse(responseBody);\n\ntests[\"userId is 1\"] = responseBody.userId === 1;\ntests[\"Id is 1\"] = responseBody.id === 1;\n\ntests[\"Title is sunt aut facere repellat provident occaecati excepturi optio reprehenderit\"] = responseBody.title \n=== \"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\";\n\ntests[\"Title is \"] = responseBody.title === \"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\";",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1501052115590,
+			"name": "GET POST 1",
+			"description": "testing get",
+			"collectionId": "924e9158-6e12-459e-7f3e-1162feed2486",
+			"responses": []
+		}
+	]
+}
